@@ -3,7 +3,7 @@
 ## Deployment
 
 - You can see the deployed version here:  
-  [Task Management App]()  
+  [Task Management App](https://sis-jain.github.io/Task-Management-App)  
   (Test out task management features, including creating, editing, and deleting tasks!)
 
 ## How to Run
