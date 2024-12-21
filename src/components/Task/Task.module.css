@@ -6,16 +6,16 @@
 }
 
 button {
-    background-color: cadetblue;
+    background-color: #4DA1A9;
     color: #fff;
     font-family: fangsong;
     cursor: pointer;
     border-radius: 5px;
 }
 .addButton {
-    width: 70px;
+    width: 80px;
     margin: 10px;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
 }
 .logoutButton {
@@ -31,9 +31,9 @@ button {
 }
 
 input {
-    height: 30px;
-    width: 260px;
-    font-size: 24px;
+    height: 35px;
+    width: 350px;
+    font-size: 28px;
     font-family: emoji;
 }
 
@@ -46,9 +46,11 @@ input {
     }
     .tasksList {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 20px;
+        background-color: #79D7BE;
+        border: 1px solid #2E5077;
 
         .completedTask {
             text-decoration: line-through;
@@ -57,15 +59,24 @@ input {
         .taskName {
             font-size: 24px;
             font-family: emoji;
-            width: 100px;
+            display: flex;
+            align-items: baseline;
+            width: 80%;
+            word-break: break-word;
+            text-align: left;
+
             >input {
                 height: 18px;
                 width: 18px;
+                margin-right: 15px;
             }
         }
         .buttons {
             button {
-                margin-right: 10px;
+                margin-left: 10px;
+                padding: 10px;
+                background: transparent;
+                border: none;
             }
         }
     }

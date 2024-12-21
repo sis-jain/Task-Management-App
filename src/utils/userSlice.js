@@ -10,6 +10,9 @@ const userSlice = createSlice({
         isAuthenticated: true,
       });
     },
+    EXISTING_USER: (state) => {
+      Object.assign(state, { allTasks: state.allTasks, isAuthenticated: true });
+    },
     CREATE_TASK: (state, action) => {
       state.allTasks.push(action.payload);
     },
@@ -25,13 +28,11 @@ const userSlice = createSlice({
       Object.assign(state.allTasks[index], action.payload);
     },
     REMOVE_USER: (state) => {
-      Object.assign(state, { allTasks: [], isAuthenticated: false });
-      delete state.username;
-      delete state.password;
+      Object.assign(state, { allTasks: state.allTasks, isAuthenticated: false });
     },
   },
 });
 
 export default userSlice.reducer;
-export const { CREATE_TASK, DELETE_TASK, EDIT_TASK, CREATE_USER, REMOVE_USER } =
+export const { CREATE_TASK, EXISTING_USER, DELETE_TASK, EDIT_TASK, CREATE_USER, REMOVE_USER } =
   userSlice.actions;

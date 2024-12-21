@@ -24,16 +24,16 @@ function setDataInLocalStorage(state) {
   }
 }
 
-function getDataFromLocalStorage() {
+export function getDataFromLocalStorage() {
   try {
     const data = localStorage.getItem("users");
     if (data) {
-      return { user: JSON.parse(data) };
+      return [JSON.parse(data) ];
     }
   } catch (err) {
     console.error(err);
   }
-  return { user: {} };
+  return [];
 }
 
 export default store;

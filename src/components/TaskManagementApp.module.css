@@ -1,13 +1,15 @@
 .taskManagement {
-    width: 50%;
+    width: 70%;
     text-align: center;
     margin: 75px auto;
-    background-color: antiquewhite;
+    background-color: #F6F4F0;
+    border: 2px solid #2E5077;
+    border-radius: 3px;
 
     h1 {
         font-family: cursive;
-        background-color: cadetblue;
-        color: darkblue;
+        background-color: #2E5077;
+        color: #F6F4F0;
         padding: 20px;
     }
 

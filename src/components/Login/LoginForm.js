@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import styles from "./LoginForm.module.css";
-import { CREATE_USER } from "../../utils/userSlice";
+import { CREATE_USER, EXISTING_USER } from "../../utils/userSlice";
+import { getDataFromLocalStorage } from "../../utils/store";
 
 export default function LoginForm() {
   const dispatch = useDispatch();
@@ -25,7 +26,13 @@ export default function LoginForm() {
       setTimeout(() => setIsPasswordError(false), 2000);
     }
     if (valid) {
-      dispatch(CREATE_USER({ ...formData, allTasks: [] }));
+      const existingData = getDataFromLocalStorage();
+      const userData = existingData?.find(el => el.username === username && el.password === password)
+      if(userData) {
+        dispatch(EXISTING_USER());
+      } else {
+        dispatch(CREATE_USER({ ...formData, allTasks: userData?.allTasks || [] }));
+      }
     }
   };
 
