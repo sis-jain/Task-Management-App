@@ -1,0 +1,31 @@
+form {
+
+    .formField {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 30px;
+        font-family: auto;
+
+        .errorText {
+            font-size: 16px;
+            font-weight: 700;
+            font-family: auto;
+            color: red;
+        }
+    }
+
+    .submitButton {
+        padding: 15px 25px;
+        background-color: cadetblue;
+        color: #fff;
+        font-family: fangsong;
+        font-size: 24px;
+        margin-top: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}

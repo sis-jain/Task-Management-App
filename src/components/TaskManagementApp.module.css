@@ -1,0 +1,17 @@
+.taskManagement {
+    width: 50%;
+    text-align: center;
+    margin: 75px auto;
+    background-color: antiquewhite;
+
+    h1 {
+        font-family: cursive;
+        background-color: cadetblue;
+        color: darkblue;
+        padding: 20px;
+    }
+
+    .authApp {
+        padding: 30px;
+    }
+}
